@@ -12,10 +12,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	const data = await prisma.shortLink.findFirst({
 		where: { slug: { equals: slug } },
 	});
-	console.log(data);
 
 	if (!data) {
 		res.status(404).send(JSON.stringify({ error: "Slug not found" }));
+		return;
 	}
 
 	return res.redirect(data.url);
