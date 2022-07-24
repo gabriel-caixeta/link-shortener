@@ -9,6 +9,10 @@ export async function middleware(req: NextRequest) {
 		return NextResponse.next();
 	}
 
+	if (req.nextUrl.pathname === "/") {
+		return NextResponse.next();
+	}
+
 	const slug = req.nextUrl.pathname.split("/").pop();
 
 	const data = await (
