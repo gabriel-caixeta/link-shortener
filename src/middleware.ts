@@ -3,13 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function middleware(req: NextRequest) {
 	if (
+		req.nextUrl.pathname === "/" ||
 		req.nextUrl.pathname.startsWith("/api/get-url") ||
-		req.nextUrl.pathname.includes("_")
+		req.nextUrl.pathname.includes("_") ||
+		req.nextUrl.pathname.includes("favicon")
 	) {
-		return NextResponse.next();
-	}
-
-	if (req.nextUrl.pathname === "/") {
 		return NextResponse.next();
 	}
 
