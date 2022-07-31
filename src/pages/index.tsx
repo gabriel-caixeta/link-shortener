@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useForm } from "react-hook-form";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import CopiedToClipboard from "../components/CopiedToClipboard";
 
 export interface IFormValues {
@@ -12,7 +12,7 @@ export interface IFormValues {
 }
 
 const Home: NextPage = () => {
-	const { register, handleSubmit, setValue, watch } = useForm<IFormValues>();
+	const { register, handleSubmit, setValue } = useForm<IFormValues>();
 
 	const serverUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 

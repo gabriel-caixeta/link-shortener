@@ -88,6 +88,12 @@
 	color: var(--primary-color);
 }
 
+.button_submit:disabled {
+	background-color: gray;
+	color: darkgray;
+	cursor: not-allowed;
+}
+
 .header {
 	width: 100%;
 	display: flex;
