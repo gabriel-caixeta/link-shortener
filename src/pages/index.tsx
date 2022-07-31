@@ -3,8 +3,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useForm } from "react-hook-form";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
-import { Input } from "../components/input";
-import { useState } from "react";
 
 export interface IFormValues {
 	slug: string;
