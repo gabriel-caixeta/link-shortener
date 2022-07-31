@@ -3,6 +3,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useForm } from "react-hook-form";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
+import { toast, ToastContainer } from "react-toastify";
+import CopiedToClipboard from "../components/CopiedToClipboard";
 
 export interface IFormValues {
 	slug: string;
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
 		const url = `https://${serverUrl}${data.slug}`;
 		navigator.clipboard.writeText(url);
 		// Toast link copied to clipboard
-		console.log("copied");
+		toast.success(<CopiedToClipboard />);
 	};
 
 	const handleRandomize = () => {
