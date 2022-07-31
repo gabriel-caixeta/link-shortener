@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>G-Short</title>
 				<meta name="description" content="A simple and free link shortener" />
-				{/* <link rel="icon" href="/images/favicon.ico" /> */}
 				<link
 					rel="icon"
 					type="image/png"
