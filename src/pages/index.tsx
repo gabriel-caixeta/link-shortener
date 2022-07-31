@@ -80,6 +80,7 @@ const Home: NextPage = () => {
 					<a
 						href="https://github.com/gabriel-caixeta/link-shortener"
 						target="_blank"
+						rel="noopener noreferrer"
 						className={styles.text_link}
 					>
 						Github
