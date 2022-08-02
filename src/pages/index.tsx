@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { toast } from "react-toastify";
 import CopiedToClipboard from "../components/CopiedToClipboard";
+import Image from "next/image";
+import img from "../assets/reverse-icon-50.png";
+import Link from "next/link";
 
 export interface IFormValues {
 	slug: string;
@@ -35,9 +38,12 @@ const Home: NextPage = () => {
 		<div className={styles.container}>
 			<main className={styles.main}>
 				<div className={styles.header}>
-					<a href={""}>
-						<h1>G-Short</h1>
-					</a>
+					<Link href="/">
+						<span className={styles.header_title}>
+							<Image className={styles.header_logo} src={img} alt="logo" />
+							G-Short
+						</span>
+					</Link>
 				</div>
 
 				<div className={styles.content}>
